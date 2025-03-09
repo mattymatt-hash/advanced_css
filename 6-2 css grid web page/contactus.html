@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Candy Store</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="contactformwithemail.js"></script>
+</head>   
+<body>
+    <div class="container">
+        <!-- Header Section -->
+        <header>
+          <h1>About Us</h1>
+          <p>Learn more about our sweet candy shop.</p>
+        </header>
+    
+        <!-- Navigation Section -->
+        <nav>
+          <ul>
+            <li><a href="candystore.html">Home</a></li>
+            <li><a href="testimonials.html">Testimonials</a></li>
+            <li class="dropdown">
+              <a href="#">Video</a>
+              <ul class="dropdown-menu">
+                <li><a href="gallery.html">Homemade</a></li>
+                <li><a href="gallery.html">History</a></li>
+              </ul>
+            </li>
+            <li><a href="aboutus.html">About</a></li>
+            <li><a href="contactus.html">Contact</a></li>
+          </ul>
+        </nav>
+  
+   <div class="main-container">
+    <form action="contactformwithemail.php" method="POST" id="contactForm">
+       <fieldset>
+    <label for="name"><i class="fas fa-user"></i> Contact Name:</label>
+                <input type="text" id="name" name="name" required aria-label="Contact Name">
+                
+                <div class="autocomplete-container" id="autocomplete-container"></div>
+    </fieldset>
+                <fieldset>
+                    <legend>Mailing Address</legend>
+                    <label for="address">Street Address:</label>
+                    <input type="text" id="address" name="address" required placeholder="Enter your street address">
+                    <label for="city">City:</label>
+                    <input type="text" id="city" name="city" required placeholder="Enter your city">
+                    <label for="state">State:</label>
+                    <input type="text" id="state" name="state" required placeholder="Enter your state">
+                    <label for="zip">Zip Code:</label>
+                    <input type="text" id="zip" name="zip" required placeholder="Enter your zip code">
+                </fieldset>
+
+                <fieldset>
+                    <legend>Billing Address: Same As Above?</legend>
+                    <label>
+                        <input type="checkbox" id="sameAsAddress" name="sameAsAddress">yes
+                    </label>
+                    <label>
+                    <input type="checkbox" id="nosameAsAddress" name="sameAsAddress">no
+                    </label>
+                </fieldset>
+                
+                <fieldset>
+                <label for="age">How old are you?</label>
+                <select id="age" name="age" required>
+                    <option value="">Select...</option>
+                    <option value="Under 18">Under 18</option>
+                    <option value="18-25">18-25</option>
+                    <option value="26-35">26-35</option>
+                    <option value="36-45">36-45</option>
+                    <option value="46-55">46-55</option>
+                    <option value="56-65">56-65</option>
+                    <option value="66 or Above">66 or Above</option>
+                </select>
+           <fieldset>
+                <label for="social_media">What social media platforms do you use?</label><i class="fa-brands fa-github"></i><i class="fa-brands fa-tiktok"></i><i class="fa-brands fa-snapchat"></i><i class="fa-brands fa-pinterest"></i><i class="fa-brands fa-youtube"></i><i  class="fa-brands fa-linkedin"></i><i class="fa-brands fa-instagram"></i><i class="fa-brands fa-facebook"></i> <i class="fa-brands fa-twitter"></i>
+                <select id="social_media" name="social_media[]" multiple required>
+                    <option value="Facebook">Facebook</option>
+                    <option value="Twitter">Twitter</option>
+                    <option value="Instagram">Instagram</option>
+                    <option value="LinkedIn">LinkedIn</option>
+                    <option value="YouTube">YouTube</option>
+                    <option value="Pinterest">Pinterest</option>
+                    <option value="Snapchat">Snapchat</option>
+                    <option value="TikTok">TikTok</option>
+                    <option value="TikTok">GitHub</option> 
+               </select>
+            </fieldset>
+                <fieldset>
+                    <legend>Preferred Contact Method:</legend>
+                    <label><input type="radio" value="phone" name="contact_method" required> Phone <i class="fa-solid fa-phone"></i></label>
+                    <label><input type="radio" value="email" name="contact_method" required> Email <i class="fa-solid fa-envelope"></i></label>
+                    <label><input type="radio" value="other" name="contact_method" required> Other</label>
+                    <div id="phoneNumberDiv" style="display:none;">
+                        <label for="phone_number">Phone Number:</label>
+                        <input type="text" id="phone_number" name="phone_number" placeholder="Phone Number">
+                    </div>
+                    <fieldset style="display:none;">
+                        <label for="honeypot">Leave this field blank (Honeypot):</label>
+                        <input type="text" id="honeypot" name="honeypot" autocomplete="off" aria-label="Honeypot Field">
+                    </fieldset>
+                </fieldset>
+                <fieldset>
+                <label for="reason">Reason for Contact:</label>
+                <select id="reason" name="reason" required aria-label="Reason for Contact">
+                    <option value="">Select...</option>
+                    <option value="Inquiry">out of state order</option>
+                    <option value="Support">Support</option>
+                    <option value="Feedback">Feedback</option>
+                    <option value="other">other</option>
+                </select>
+            </fieldset>
+                <fieldset>
+                <label for="hear_about_us">How Did You Hear About Us?</label>
+                <select id="hear_about_us" name="hear_about_us" required aria-label="How Did You Hear About Us?">
+                    <option value="">Select...</option>
+                    <option value="Social Media">Social Media</option>
+                    <option value="Friend/Family">Friend/Family</option>
+                    <option value="Online Search">Online Search</option>
+                    <option value="Advertisement">Advertisement</option>
+                    <option value="Event">Event</option>
+                    <option value="Other">Other</option>
+                </select>
+             </fieldset>
+                <fieldset>
+                <label for="email"><i class="fas fa-envelope"></i> Contact Email Address:</label>
+                <input type="email" id="email" name="email" required aria-label="Contact Email Address">
+            </fieldset>
+                <fieldset>
+                <label for="comments">Comments:</label>
+                <textarea id="comments" name="comments" rows="5" maxlength="300" required aria-label="Comments"></textarea>
+            </fieldset>
+                <fieldset>
+                <label for="signature">Please Sign:</label>
+                <textarea id="signature" name="signature" rows="2" maxlength="60" required aria-label="Signature"></textarea>
+            </fieldset>
+            <fieldset>
+            <div class="date-time">
+                    <label for="date">Date:</label>
+                    <input type="date" id="date" name="date" required aria-label="Select a date">
+
+                    <label for="time">Time:</label>
+                    <input type="time" id="time" name="time" required aria-label="Select the time">
+                </div>
+
+                <button type="submit">Submit</button>
+                <button type="reset">Clear Page</button>
+            </form>
+        </fieldset>
+    </div>
+    </body>
+          
+            </html>

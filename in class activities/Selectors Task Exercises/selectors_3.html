@@ -1,0 +1,121 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>CSS Selectors Exercise 3</title>
+	
+	<style>
+	
+body {
+	background-color:#5DC2E0;
+		}
+.flex-container{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 0.5em; 
+  background-color:white;
+	}
+		
+.container {
+	background-color:white;			
+	width: 650px;
+			    border: 1px solid black;
+				margin: 10px auto;
+				padding:15px;
+				border-radius: 20px;
+		}
+		
+ .pagination a {
+ 			 padding: 10px;}	
+ 		/* Style for links */
+a:link {
+  color: orange; /* Unvisited links are orange */
+}
+
+a:visited {
+  color: green; /* Visited links are green */
+}
+
+a:hover {
+  text-decoration: none; /* Removes the underline when hovered */
+}
+
+/* Style for the first element inside the container */
+.container p:first-of-type {
+  font-size: 150%; /* Makes the first paragraph 150% in size */
+}
+
+.container p:first-of-type::first-line {
+  color: red; /* Makes the first line of the first paragraph red */
+}
+
+/* Stripe every other row in the table */
+table tr:nth-child(odd) {
+  background-color: #333; /* Sets a dark background color for odd rows */
+  color: white; /* Sets the foreground text color to white */
+}
+	 
+ 			 
+/*In this example, try making the following changes without adding to the HTML.
+
+* Style links, making the link-state orange, visited links green, and remove the underline on hover.
+* Make the first element inside the container font-size: 150% and the first line of that element red.
+* Stripe every other row in the table by selecting these rows and giving them a background color of #333 and foreground of white.*/
+		
+		
+
+	</style>
+</head>
+
+<body>
+	<div class="flex-container">
+
+	<div class="pagination">
+		<a href="#">&laquo;</a>
+		<a href="instructions.html">Instructions</a>
+		<a href="selectors_1.html">Exercise 1</a>
+		<a href="selectors_2.html">Exercise 2</a>
+		<a href="selectors_3.html">Exercise 3</a>
+		<a href="selectors_4.html">Exercise 4</a>
+		<a href="selectors_5.html">Exercise 5</a>
+		<a href="#">&raquo;</a>
+	</div><!--close pagination div-->
+	</div><!--close flex container div-->
+	
+<div class="container">
+  <p>Veggies es <a href="http://example.com">bonus vobis</a>, proinde vos postulo essum magis kohlrabi welsh onion daikon amaranth tatsoi tomatillo melon azuki bean garlic.</p>
+  <p>Gumbo beet greens corn soko endive gumbo gourd. Parsley shallot courgette tatsoi pea sprouts fava bean collard greens dandelion okra wakame tomato. Dandelion cucumber earthnut pea peanut soko zucchini.</p>
+  <table>
+    <tr>
+      <th>Fruits</th>
+      <th>Vegetables</th>
+    </tr>
+    <tr>
+      <td>Apple</td>
+      <td>Potato</td>
+    </tr>
+    <tr>
+      <td>Orange</td>
+      <td>Carrot</td>
+    </tr>
+    <tr>
+      <td>Tomato</td>
+      <td>Parsnip</td>
+    </tr>
+    <tr>
+      <td>Kiwi</td>
+      <td>Onion</td>
+    </tr>
+    <tr>
+      <td>Banana</td>
+      <td>Beet</td>
+    </tr>
+  </table>
+</div>
+    
+    
+      <p><a href="images/selectors3.png">Selectors 3 Visual Answer</p>
+</body>
+</html>

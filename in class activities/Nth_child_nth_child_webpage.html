@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>Layout Full Flex Responsive</title>
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+		<style>
+
+	/* This is a Flexbox page layout. Take some time to reacquaint yourself with Flexbox properties!
+	Look at the html so get an idea of the semantic elements used.
+	
+		 CSS Color Palette
+			Light blue: #dbeaf0 
+			Dark blue: #176282 
+			Medium blue: #85c5e0 
+			Light green: #cdf1c3
+			Light purple: #ccb9da
+			 Light grey: #cdf1c3
+			 */
+
+
+			* {
+				margin: 0;
+				padding: 0;
+				box-sizing: border-box;
+			}
+
+			body {
+				background-color: beige;
+			}
+
+			#container {
+				display: flex;
+				flex-direction: column;
+				width: 75%;
+				font-family: Helvetica, Ariel, sans-serif;
+				margin: 20px auto;
+				background-color: white;
+				border: 2px solid black;
+				border-radius: 15px;
+			}
+
+			header {
+				display: flex;
+				justify-content: space-between;
+				background-color: #dbeaf0;
+				padding: 0.8em;
+				border-top-left-radius: 15px;
+				border-top-right-radius: 15px;
+			}
+
+			nav {
+				color: white;
+				background-color: #176282;
+				padding: 0.5em;
+				font-size: 0.8em;
+			}
+
+			nav ul {
+				display: flex;
+				justify-content: center;
+				align-items: center;
+			}
+
+			nav ul li {
+				list-style-type: none;
+				margin-right: 1.8em;
+				text-align:center;
+				padding:0.5em;
+				width:4.5em;
+		
+			}
+			/* this is an example of the use of the first child selector*/
+			nav ul li:first-child {
+				background-color: hsl(269, 93%, 39%);
+		
+			}
+
+			nav a {
+				color: white;
+				text-decoration: none;
+			}
+			nav a:hover {
+				list-style-type: none;
+				color: #85a9e0;
+			}
+
+			main {
+				display: flex;
+				flex-direction:row;
+			}
+
+			#middle {
+				background-color: #dee9ed;
+				padding: 0.75em;
+				border-right: 1px solid black;
+				border-top: 1px solid black;
+				order: 2;
+				flex: 5;
+			}
+
+			#sidebar_a {
+				background-color: #85c5e0;
+				padding: 0.75em;
+				border-right: 1px solid black;
+				border-top: 1px solid black;
+				order: 1;
+				flex: 2;
+			}
+
+			/* this is another example of the use of the first child selector*/
+
+			#middle p:first-child {
+				color: hsl(269, 93%, 39%);
+			}
+
+			#sidebar_b {
+				background-color: #cdf1c3;
+				padding: 1.5em;
+				//border-right:1px solid black;
+				border-top: 1px solid black;
+				order: 3;
+				flex: 2;
+			}
+
+			.grayboxcontainer {
+				display: flex;
+				flex-direction: row;
+				justify-content: center;
+				align-items: center;
+				flex-wrap: wrap;
+				//border:1px solid black;
+				height: 250px;
+			}
+
+			.graybox {
+				background-color: lightgray;
+				width: 75px;
+				padding: 20px;
+				border: 1px solid black;
+				margin: 10px;
+			}
+
+			section{
+				display: flex;
+				flex-direction: row;
+				max-width: 1400px;
+				border-top: 1px solid black;
+			}
+
+			article {
+				padding: 10px;
+				background-color: #dee9ed;
+			}
+
+			/* Add nth child selectors to the following - nth-child 1, 2, and 3*/
+
+	
+
+			footer {
+				color: white;
+				background-color: black;
+				text-align: center;
+				padding: 1.2em;
+				border-bottom-left-radius: 13px;
+				border-bottom-right-radius: 13px;
+			}
+
+	
+/* Let's get some Media Query practice! Create a media query so that the entire page collapse into a single column for small device viewport (less than 600px). */
+
+
+		</style>
+	</head>
+
+	<body>
+		<div id="container">
+			<header>
+				<h1>Flexbox Layout</h1>
+
+				<p class="search">
+					<input type="text" class="search-input" placeholder="Search" />
+				</p>
+			</header>
+
+			<nav>
+				<ul>
+					<li><a href="">HOME</a></li>
+					<li><a href="">PROFILE</a></li>
+					<li><a href="">LOGOUT</a></li>
+				</ul>
+			</nav>
+
+			<main>
+				<div id="middle">
+					<h3>Main Content</h3>
+					<div>
+						<p>
+							Vivamus pretium, est nec lacinia tempor, dui ligula efficitur
+							orci, et malesuada nisi sem eu mi. Suspendisse porttitor at tortor
+							id pharetra. Nam risus orci, tempor ac nisl a, eleifend blandit
+							dui. Mauris a risus consectetur, fermentum justo a, convallis
+							neque. Vestibulum ornare fringilla vehicula. Mauris sit amet velit
+							a sapien commodo blandit.
+						</p>
+						<p>
+							Sed lobortis dignissim ligula, vitae convallis ante iaculis et.
+							Praesent malesuada tincidunt lectus ac ullamcorper.Paragraph
+							content. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+							Nam laoreet porttitor justo viverra convallis. Etiam vitae sapien
+							blandit, cursus nibh ac, maximus ex. Praesent at tempus diam, at
+							venenatis ipsum. Donec pharetra vitae turpis ornare semper. Mauris
+							eu faucibus nisl.
+						</p>
+					</div>
+					<div class="grayboxcontainer">
+						<div class="graybox">
+							<p>Image box 1.</p>
+						</div>
+						<!--close gray box-->
+
+						<div class="graybox">
+							<p>Image box 2.</p>
+						</div>
+						<!--close gray box-->
+					</div> <!-- close gray box container-->
+				</div><!--close middle div-->
+
+				<div id="sidebar_a">
+					<h3>Sidebar A Content</h3>
+					<p>
+						Paragraph content. Lorem ipsum dolor sit amet, consectetur
+						adipiscing elit. Nam laoreet porttitor justo viverra convallis.
+						Etiam vitae sapien blandit, cursus nibh ac, maximus ex. Praesent at
+						tempus diam, at venenatis ipsum. Donec pharetra vitae turpis ornare
+						semper. Mauris eu faucibus nisl.
+					</p>
+					<p>
+						Paragraph content. Lorem ipsum dolor sit amet, consectetur
+						adipiscing elit. Nam laoreet porttitor justo viverra convallis.
+						Etiam vitae sapien blandit, cursus nibh ac, maximus ex. Praesent at
+						tempus diam, at venenatis ipsum. Donec pharetra vitae turpis ornare
+						semper. Mauris eu faucibus nisl.
+					</p>
+				</div>
+				<!--close sidebar A div-->
+
+				<div id="sidebar_b">
+					<h3>Sidebar B</h3>
+					<p>
+						Paragraph content. Lorem ipsum dolor sit amet, consectetur
+						adipiscing elit. Nam laoreet porttitor justo viverra convallis.
+					</p>
+					<ul>
+						<li>Information A.</li>
+						<li>Information B.</li>
+						<li>Information C.</li>
+						<li>Information D.</li>
+						<li>Information D.</li>
+						<li>Information F.</li>
+					</ul>
+
+					<p>
+						Paragraph content. Lorem ipsum dolor sit amet, consectetur
+						adipiscing elit. Nam laoreet porttitor justo viverra convallis.
+					</p>
+				</div><!--close sidebar B div-->
+			</main>
+			<section>
+				<article>
+					<h3>Special Info 1.</h3>
+					<p>
+						Paragraph content. Lorem ipsum dolor sit amet, consectetur
+						adipiscing elit. Nam laoreet porttitor justo viverra convallis.
+						Etiam vitae sapien blandit, cursus nibh ac, maximus ex. Praesent at
+						tempus diam, at venenatis ipsum. Donec pharetra vitae turpis ornare
+						semper. Mauris eu faucibus nisl.
+					</p>
+				</article>
+
+				<article>
+					<h3>Special Info 2.</h3>
+					<p>
+						Paragraph content. Lorem ipsum dolor sit amet, consectetur
+						adipiscing elit. Nam laoreet porttitor justo viverra convallis.
+						Etiam vitae sapien blandit, cursus nibh ac, maximus ex. Praesent at
+						tempus diam, at venenatis ipsum. Donec pharetra vitae turpis ornare
+						semper. Mauris eu faucibus nisl.
+					</p>
+				</article>
+				<!--close 2 div-->
+
+				<article>
+					<h3>Special Info 3.</h3>
+					<p>
+						Paragraph content. Lorem ipsum dolor sit amet, consectetur
+						adipiscing elit. Nam laoreet porttitor justo viverra convallis.
+						Etiam vitae sapien blandit, cursus nibh ac, maximus ex. Praesent at
+						tempus diam, at venenatis ipsum. Donec pharetra vitae turpis ornare
+						semper. Mauris eu faucibus nisl.
+					</p>
+				</article>
+			</section>
+
+			<footer>
+				<p>Footer</p>
+			</footer>
+		</div>
+		<!--close container div-->
+	</body>
+</html>

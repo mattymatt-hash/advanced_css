@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Design with CSS Web Page</title>
+    <meta name="description" content="In class activity for specifying color">
+    <style>
+        /* Global Styles */
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        h1, h3 {
+            font-family: 'Bevan', cursive;
+            color: #2c3e50;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        li {
+            padding: 5px 0;
+        }
+
+        /* Container Styling */
+        #container {
+            width: 80%;
+            margin: 0 auto;
+            background: hsl(210, 60%, 90%);
+            border: 2px solid hsl(210, 60%, 50%);
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            border-radius: 15px;
+            padding: 20px;
+        }
+
+        header {
+            text-align: center;
+            padding: 10px 0;
+        }
+
+        footer {
+            text-align: center;
+            background-color: #333;
+            color: white;
+            padding: 10px 0;
+        }
+
+        /* Gradient background for the container */
+        #container {
+            background: linear-gradient(135deg, rgba(58, 123, 213, 0.8), rgba(87, 158, 233, 0.8));
+        }
+
+        /* Image Opacity */
+        img {
+            opacity: 0.85;
+            display: block;
+            margin: 20px auto;
+            max-width: 100%;
+        }
+
+        /* Button Styling */
+        .button {
+            display: inline-block;
+            padding: 10px 20px;
+            background: linear-gradient(135deg, #ff6347, #ff8c00);
+            color: white;
+            text-decoration: none;
+            border: 2px solid #ff6347;
+            border-radius: 5px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+            transition: background-color 0.3s, transform 0.3s;
+        }
+
+        .button:hover {
+            background-color: #ff4500;
+            transform: scale(1.05);
+        }
+
+        /* Link Styling */
+        a {
+            color: #3498db;
+            text-decoration: none;
+        }
+
+        a:hover {
+            color: #2980b9;
+        }
+
+        /* Footer text styling */
+        footer p {
+            font-size: 18px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+<div id="container">
+    <header>
+        <h1>Design with CSS Web Page.</h1>
+    </header>
+
+    <main>
+        <h3>Step 1: COLOR!</h3>
+        <p>Color can be specified for web pages by using RGB values, hexadecimal values, HSB values, and color names. In this unit we discussed the case for using HSL as an excellent tool for modifying the lightness/darkness and saturation of a given hue.</p>
+        <p>Opacity (AKA transparency) can be applied to anything with color. This includes text color, background color, and images.</p>
+        <p>Use this page and CSS stylesheet to practice with color and opacity values. Use the various resources to change the colors in the text and background of the elements on this page.</p>
+        <ul>
+            <li>Apply background color to the container using HSL values.</li>
+            <li>Apply a border, box-shadow, and rounded corners to the container.</li>
+            <li>Use the CSS opacity property to change the opacity of the image.</li>
+            <li>Create a gradient in the background of the container.</li>
+            <li>Create a customized button (button below) that includes a gradient, box-shadow, and border.</li>
+            <li>Use the HSLA specification to change the transparency of a color and/or a drop shadow.</li>
+            <li>Apply text and color styling to the footer area.</li>
+            <li>"I Love Color!" - Create a link to your favorite color picker - style the link.</li>
+        </ul>
+
+        <h3>Step 2: FONTS!</h3>
+        <ul>
+            <li>Apply the font-family property to the body text using web-safe fonts and font fallback.</li>
+            <li>Apply font readability principles as discussed in the module.</li>
+            <li>Apply a custom font to the headings.</li>
+        </ul>
+
+        <img src="images/peacock.jpg" width="640" height="427">
+
+        <a href="https://www.moonlightfeather.com/peacock-1/" class="button">Get Feathers!</a>
+    </main>
+
+    <footer>
+        <p>I love color!</p>
+    </footer>
+</div><!--close container div-->
+</body>
+</html>

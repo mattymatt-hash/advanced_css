@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Combinators Examples</title>
+    <style>
+        /* In this exercise follow along with your instructor
+        to add combined selectors to colorize areas of this ad.
+        Experiment on your own with various combinators to see
+        how each type affects the appearance of the ad. 
+        Remember that combining selectors depends heavily on source order.
+        So... look at the html! 
+
+        /* Remove the border to see the entire div for the ad */
+        div {
+            /* border: 2px solid black; */
+            width: 800px;
+            display: flex;
+            font-family: arial;
+            margin: auto;
+        }
+
+        img {
+            width: 250px;
+            display: block;
+            margin: auto;
+        }
+
+        p {
+            font-size: 20px;
+        }
+
+        /* GENERAL SIBLING */
+        /* We want to color give color to not ALL the paragraphs, but 
+        only paragraphs AFTER the h1. In this case we would use a
+        general sibling combinator. */
+        h1 ~ p {
+            background-color: green;
+            color: white;
+            padding: 10px;
+        }
+
+        /* ADJACENT SIBLING */
+        /* Now we want to give a different color to ONLY
+        the first paragraph AFTER the h1. In this case we would use the
+        adjacent sibling. */
+        h1 + p {
+            background-color: red;
+        }
+
+        /* CHILD COMBINATORS */
+        /* We want to style the right sidebar that contains the lists.
+        We only want the first level ul (the list headers) (not the second level).
+        We use the child combinator to style just the first level ul. */
+        div > ul {
+            background-color: beige;
+            border-left: solid 1px black;
+            margin-left: 10px;
+            padding-left: 10px;
+            list-style: none;
+            width: 300px;
+        }
+
+        /* The following styles the left panel.
+        This is a div within a div, or the child div of the parent div.
+        Remove the background color to see the result. */
+        div > div {
+           /* background-color: lightblue; /* Un-comment this to see the background */
+            display: block;
+            margin: auto;
+            width: 500px;
+        }
+
+        /* The following styles the box inside the left panel.
+        This box is a div within a div, or a child of a parent div,
+        but ALSO a descendent selector of the top level div.
+        So, we use a combination of a descendent selector along with
+        a child combinator */
+        div > ul {
+            background-color: beige;
+            text-align: center;
+            border: solid 1px blue;
+            padding-top: 5px;
+        }
+
+        /* DESCENDANT COMBINATOR */
+        /* Descendant selectors style ALL child elements of the parent.
+        We want to style the list items in the (first level) unordered list. */
+        ul li {
+            margin-bottom: 10px;
+            color: darkgreen;
+        }
+
+        /* However, we want to now make the second set of list items
+        a different color. So... we add another descendent selector to the first. */
+        ul li ul li {
+            text-decoration: underline;
+            color: darkblue;
+        }
+
+        /* COMBINED COMBINATORS */
+        /* Here is where it can get tricky.
+        We want to make the "click here for more information" stand out.
+        In the html, this text is the second paragraph in a div.
+        That div is the second div inside the main parent div,
+        and is a child/descendent of the main div. */
+        div > div > p + p {
+            color: purple;
+            background-color: yellow;
+            padding: 0.5em;
+            font-size: 15px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <div>
+            <h1>This is An Exciting Article That is Definitely Not Clickbait</h1>
+
+            <p>By Matthew Croak</p>
+
+            <img
+                src="https://previews.123rf.com/images/mheim301165/mheim3011651608/mheim301165160800097/61804242-attractive-young-woman-gawping-in-amazement-and-surprise-with-pen-mouth-and-wide-eyes-head-shot-isol.jpg"
+                alt="image of woman's face"/>
+
+            <p>
+                If you buy my product you will lose all body fat and become rich
+                overnight!
+            </p>
+            <div>
+                <p>HERE'S AN AD FOR A THING WE OVERHEARD YOU TALKING ABOUT</p>
+                <p>Click here for more information.</p>
+            </div>
+            <p>
+                Sometimes you have to take a chance on things. Love. A new job. So
+                now, what's stopping you from taking another chance on my product.
+                It's only $39.99 for the first three months and then if you're
+                actually still using it after that boom it's free because it only
+                costs me like a dollar to produce.
+            </p>
+        </div>
+        <ul>
+            <h1>What to read next</h1>
+            <li>
+                <ul>
+                    <h2>Related Articles</h2>
+                    <li>
+                        How This Entrepreneur Made a Billion Dollars Selling Potatoes on
+                        Amazon.
+                    </li>
+                    <li>Edible Face Cream Cures Acne and Gout</li>
+                    <li>
+                        Why Jeph Besos is Buying Old Socks on the Nue Yerk Stock Exchange
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <ul>
+                    <h2>Unrelated Articles</h2>
+                    <li>Woman Saves Baby by Getting Divorced</li>
+                    <li>Florida Man Does Something Uneventful</li>
+                    <li>Climate Change Deniers Show Nostalgia for Ice Age</li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+</body>
+</html>

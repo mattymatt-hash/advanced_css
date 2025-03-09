@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fortune Telling Website</title>
+    <link rel="stylesheet" href="fortune2styles.css">
+    <style>
+        body, html {
+            height: 100%;
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: transparent;
+            color: #fff;
+            text-align: center;
+        }
+        .content {
+            position: relative;
+            z-index: 1;
+            padding: 20px;
+            max-width: 90%;
+            box-sizing: border-box;
+        }
+        .fortune-teller-img {
+            width: 100%;
+            max-width: 200px;
+            height: auto;
+            border-radius: 50%;
+        }
+        .links {
+            margin-top: 40px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .links a {
+            display: inline-block;
+            margin: 10px 0;
+            padding: 10px 20px;
+            background-color: black;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+            width: 100%;
+            max-width: 200px;
+            text-align: center;
+        }
+        .links a:hover {
+            background-color: #666;
+        }
+
+        /* Responsive design adjustments */
+        @media (max-width: 768px) {
+            body, html {
+                flex-direction: column;
+                padding: 20px;
+            }
+            .content {
+                padding: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="content">
+        <h1>katies fortune telling and tarot card readings</h1>
+        <img src="836112614658420229.jpg" alt="Fortune Teller" class="fortune-teller-img">
+        <div class="links">
+            <a href="tarotcardreading.html">Tarot Card Reading</a>
+            <a href="horoscope.html">Horoscope</a>
+        </div>
+    </div>
+    <video autoplay muted loop class="background-video">
+        <source src="05.07.2024_21.24.49_REC.mp4" type="video/mp4">
+        Your browser does not support HTML5 video.
+    </video>
+</body>
+</html>

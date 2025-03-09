@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Specificity Examples</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: black;
+        }
+
+        /* Inherited style from body */
+        p {
+            color: darkblue; /* Inherited color from body */
+            font-size: 16px;
+        }
+
+        /* Specificity Example 1: Type Selector (Selector Type) */
+        h1 {
+            color: red; /*overridden by a more specific rule later */
+        }
+
+        /* Specificity Example 2: Class Selector */
+        .highlight {
+            color: green; /* Will override h1 color if applied to any h1 */
+        }
+
+        /* Specificity Example 3: ID Selector (Highest Specificity) */
+        #important {
+            color: purple; /* applied last, overrides all others */
+            font-size: 24px;
+        }
+
+        /* Precedence Example: Same Specificity but Later in CSS */
+        h2 {
+            color: orange; /* overridden by .highlight when it is applied */
+        }
+
+        .highlight h2 {
+            color: green; /* Higher specificity cuz of combination of class and element */
+        }
+    </style>
+</head>
+<body>
+    <h1 id="important"> H1 Heading (with ID specificity)</h1>
+    <p>This paragraph inherits its color from the body.</p>
+
+    <h2 class="highlight"> H2 Heading (with class specificity)</h2>
+    <p class="highlight">This paragraph will have green text because of the class <code>.highlight</code>.</p>
+
+    <h3>This is an H3 Heading (no additional styling applied)</h3>
+
+    <p>with CSS inheritance, properties like font family and line height are inherited from parent elements (the body), properties like color and background are not automatically inherited unless specified.</p>
+</body>
+</html>

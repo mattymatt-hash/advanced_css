@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Candy Store</title>
+  <link rel="stylesheet" href="styles.css"> <!-- Linking the compiled CSS -->
+ 
+</head>
+<body>
+  <div class="container">
+    <!-- Header Section -->
+    <header>
+      <h1>Welcome to the Candy Store!</h1>
+      <p>Your one-stop shop for the sweetest treats.</p>
+    </header>
+
+    <!-- Navigation Section -->
+    <nav>
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="testimonials.html">Testimonials</a></li>
+        <li class="dropdown">
+          <a href="#">Video</a>
+          <ul class="dropdown-menu">
+            <li><a href="#how-its-made">Homemade</a></li>
+            <li><a href="#history-of-candy">History</a></li>
+          </ul>
+        </li>
+        <li><a href="aboutus.html">About</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+
+    <!-- Main Content Section (CSS Grid Layout) -->
+    <main>
+      <section id="products" class="product-grid">
+        <div class="product-item">
+          <img src="candystoreimages/chocolatecircles.jpg" alt="Chocolate Circles">
+          <h3>Chocolate Circles</h3>
+          <p>Sweet and creamy chocolate circles.</p>
+          <div class="offer-message">Mention this ad for 20% off!</div>
+        </div>
+        <div class="product-item">
+          <img src="candystoreimages/cottoncandysucker.jpg" alt="Cotton Candy Sucker">
+          <h3>Cotton Candy Sucker</h3>
+          <p>Delightful cotton candy on a stick.</p>
+          <div class="offer-message">Mention this ad for 20% off!</div>
+        </div>
+        <div class="product-item">
+          <img src="candystoreimages/gummybears.jpg" alt="Gummy Bears">
+          <h3>Gummy Bears</h3>
+          <p>Chewy and sweet gummy bears.</p>
+          <div class="offer-message">Mention this ad for 20% off!</div>
+        </div>
+        <div class="product-item">
+          <img src="candystoreimages/gummycherrys.jpg" alt="Gummy Cherries">
+          <h3>Gummy Cherries</h3>
+          <p>Chewy gummy cherries in delicious flavors.</p>
+          <div class="offer-message">Mention this ad for 20% off!</div>
+        </div>
+        <div class="product-item">
+          <img src="candystoreimages/gummyworms.jpg" alt="Gummy Worms">
+          <h3>Gummy Worms</h3>
+          <p>Sour and sweet gummy worms.</p>
+          <div class="offer-message">Mention this ad for 20% off!</div>
+        </div>
+        <div class="product-item">
+          <img src="candystoreimages/hardfruitmix.jpg" alt="Hard Fruit Mix">
+          <h3>Hard Fruit Mix</h3>
+          <p>A tangy mix of hard fruit-flavored candies.</p>
+          <div class="offer-message">Mention this ad for 20% off!</div>
+        </div>
+        <div class="product-item">
+          <img src="candystoreimages/oldfashionedhearts.jpg" alt="Old Fashioned Hearts">
+          <h3>Old Fashioned Hearts</h3>
+          <p>Classic sweet heart-shaped candies.</p>
+          <div class="offer-message">Mention this ad for 20% off!</div>
+        </div>
+        <div class="product-item">
+          <img src="candystoreimages/orangeslices.jpg" alt="Orange Slices">
+          <h3>Orange Slices</h3>
+          <p>Fruity and tangy orange-flavored slices.</p>
+          <div class="offer-message">Mention this ad for 20% off!</div>
+        </div>
+        <div class="product-item">
+            <img src="candystoreimages\spicedrops.jpg" alt="Spice Drops">
+            <h3>Spice Drops</h3>
+            <p>Chewy, Spicy,Fruity Drops.</p>
+            <div class="offer-message">Mention this ad for 20% off!</div>
+          </div>
+   <div class="store-image">
+    <img src="candystoreimages\pexels-timmossholder-942320.jpg" alt="Store image">
+    <h3>Our New Store</h3>
+    <p>Come get your sweettooth on</p>
+   </div>
+   <div class="Text_only-box">
+    <h3>See what customers say about us.</h3>
+    <h3>Come on. We know your curious.</h3>
+    <a href="#testimonials">Click Here</a>
+    <h3>Health Benefits of Candy</h3>
+    <a href="https://pangbenta.com/others/health-benefits-candy/#google_vignette">Click Here</a>
+</div>
+<div class="store-image">
+    <img src="candystoreimages\candyfloor.jpg" alt="Store image 2">
+    <h3>Our New Store</h3>
+    <p>Your gonna Love our new Layout</p>
+   </div>  
+
+</section>
+    </main>
+
+    <!-- Footer Section -->
+    <footer>
+      <p>&copy; 2025 Candy Store | If You Dont Like Our Candy Then We Dont Like You!</p>
+    </footer>
+  </div>
+</body>
+
+<script>
+ document.querySelectorAll('.product-item').forEach(item => {
+  let timer;
+
+  // When mouse enters the product item, start the timer
+  item.addEventListener('mouseenter', () => {
+    timer = setTimeout(() => {
+      // Show the offer message after 15 seconds
+      item.querySelector('.offer-message').style.display = 'block';
+    }, 15000); // 15 seconds
+  });
+
+  // When mouse leaves the product item, clear the timer and hide the offer message
+  item.addEventListener('mouseleave', () => {
+    clearTimeout(timer); // Clear the timer if the mouse leaves early
+    item.querySelector('.offer-message').style.display = 'none'; // Hide the message
+  });
+});
+</script>
+</html>

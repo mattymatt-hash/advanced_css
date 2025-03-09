@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+<title>Split Navigation bar - Flex</title>
+<style>
+
+ nav {
+ 		font-family:"Helvetica", Ariel, sans-serif;
+ 		background-color: black;
+ 		border-radius: 10px;
+ 		}
+ 		
+ 	
+ nav ul  {
+ 		display: flex;
+ 		flex-wrap: wrap;
+ 		list-style-type: none;
+		justify-content: flex-end;
+ 		}
+ 		
+ nav a  {
+ 		color: black;
+ 		background-color:#60B99A;
+ 		display: block;
+ 		padding: 5px 5px;
+ 		text-decoration: none;
+ 		border-radius: 5px;
+ 		margin: 0.5em;
+ 		width: 100px;
+ 		text-align: center;
+ 		}
+
+/* To customize the Donate button, use the First Child selector - eliminating the need to call a class in the html. Because we are are also altering the link, you need to style the anchor elemtn and the anchor hover */
+ 
+
+ 		
+ nav a:hover  {
+ 		color: white;
+ 		background-color:#4584B1;
+ 		display: block;
+ 		padding: 5px 5px;
+ 		text-decoration: none;
+ 		border-radius: 5px;
+ 		margin: 10px;
+ 		}
+
+/* Let's get some media query practice! Add a media query to collapse the nav bar into a column.
+You will need to change the margin of the ul li:first-child.*/
+
+
+</style>
+</head>
+</body>
+ <nav>
+	<ul>
+		<li><a href="donate.html">DONATE!</a></li>
+		<li><a href="index.html">Home</a></li>
+		<li><a href="about.html">About Us</a></li>
+		<li><a href="gallery.html">Gallery</a></li>
+		<li><a href="contact.html">Contact Us</a></li>
+	</ul>
+</nav>
+</body>
+</html>

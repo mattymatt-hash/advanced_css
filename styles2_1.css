@@ -1,0 +1,39 @@
+/* 1. First-child and nth-child selector */
+.content:first-child {
+    background-color: lightblue; /* Selects the first .content section */
+}
+
+.content:nth-child(2) {
+    background-color: lightgreen; /* Selects the second .content section */
+}
+
+/* 2. Attribute selectors */
+.feature-item[data-category="premium"] {
+    color: gold; /* Selects items with the attribute data-category="premium" */
+}
+
+ul li[class~="feature-item"] {
+    font-size: 1.2em; /* Selects all li elements with class containing 'feature-item' */
+}
+
+/* 3. Combinators */
+h2 + p {
+    font-weight: bold; /* Selects <p> that immediately follows an <h2> */
+}
+
+ul > li {
+    list-style-type: square; /* Selects all <li> directly under <ul> */
+}
+
+h2 ~ p {
+    color: blue; /* Selects all <p> elements that are siblings of <h2> */
+}
+
+/* Challenge: Using combinators with pseudo-classes or pseudo-elements */
+ul li:nth-child(odd)::after {
+    content: " (odd item)"; /* Adds text after every odd <li> in the list */
+}
+
+h2:hover {
+    color: red; /* Changes the color of <h2> when hovered over */
+}
